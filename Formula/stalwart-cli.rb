@@ -1,25 +1,25 @@
 class StalwartCli < Formula
   desc "Stalwart CLI"
   homepage "https://github.com/stalwartlabs/cli"
-  version "1.0.0"
+  version "1.0.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/stalwartlabs/cli/releases/download/v1.0.0/stalwart-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "bbf72ec711c4f2cc1fee2bed814d4812ea1e68f4045d4ab9757c48a2aec64626"
+      url "https://github.com/stalwartlabs/cli/releases/download/v1.0.1/stalwart-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "f672d36e39b0b73dfb368892dde98330943fa0bf5f9f837cda6c97700de6f2da"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/stalwartlabs/cli/releases/download/v1.0.0/stalwart-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "261280a81c3144aa6515d2965772416f77a19f8cda5ad5d2d7dfffe6dc38c79a"
+      url "https://github.com/stalwartlabs/cli/releases/download/v1.0.1/stalwart-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "2080da98ad5c74467ac3b9393ec550c73f10e8b5a97a597e169e50fd86beb9b9"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/stalwartlabs/cli/releases/download/v1.0.0/stalwart-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "de8bbd84bf73e7fa17bd2a242d22c359efc74def98f44632df2a5b197357c27c"
+      url "https://github.com/stalwartlabs/cli/releases/download/v1.0.1/stalwart-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "02456bf79bc5f6c6ebe0087dfdec5aca3f3cc7beca0350361434b95095750876"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/stalwartlabs/cli/releases/download/v1.0.0/stalwart-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "0f37be5bd705709ba0e7118be38e4cbdcbb673421616cd85acb7190f1e4d72d2"
+      url "https://github.com/stalwartlabs/cli/releases/download/v1.0.1/stalwart-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "8572fceb33a4659aec938c3a777303539df5a4a12abb75ca111549368860183d"
     end
   end
   license any_of: ["AGPL-3.0-only", "LicenseRef-SEL"]
