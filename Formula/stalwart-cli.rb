@@ -1,37 +1,45 @@
 class StalwartCli < Formula
   desc "Stalwart CLI"
   homepage "https://github.com/stalwartlabs/cli"
-  version "1.0.3"
+  version "1.0.4"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/stalwartlabs/cli/releases/download/v1.0.3/stalwart-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "1cb7a30616d8674ba994db2c959b4fb77d05801c9a22e3e02a82768adb601848"
+      url "https://github.com/stalwartlabs/cli/releases/download/v1.0.4/stalwart-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "ff7fe6ccca16cfedabd54c289d2160a237efd47d23380ab4210f93ff2968e7da"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/stalwartlabs/cli/releases/download/v1.0.3/stalwart-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "2c605b627695f1e24f0e9d44fcdfa64b131cb8f18c35afe10d63f8bd395ce10e"
+      url "https://github.com/stalwartlabs/cli/releases/download/v1.0.4/stalwart-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "c03af055a23928664acf8ad7e93673bb946abb6b2c5ca65774d04df045047b23"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/stalwartlabs/cli/releases/download/v1.0.3/stalwart-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "32607a01910d6b7d2798d0c2645da70cf2c081dd8678d9d18fd74d7bd1193f18"
+      url "https://github.com/stalwartlabs/cli/releases/download/v1.0.4/stalwart-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "d6e8642f1e500c2f85eb477f469f1e47979c5394533b4ddf2e423fe21b953385"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/stalwartlabs/cli/releases/download/v1.0.3/stalwart-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "0fc0b14a9c5e3de47c8ff4d0d9816e4d5b3407184af39ab682d356c077310a7e"
+      url "https://github.com/stalwartlabs/cli/releases/download/v1.0.4/stalwart-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "15376c8d50a5640ded178d4820d3065e5315634aff9981986c5649c914bf170d"
     end
   end
   license any_of: ["AGPL-3.0-only", "LicenseRef-SEL"]
 
   BINARY_ALIASES = {
-    "aarch64-apple-darwin":              {},
-    "aarch64-unknown-linux-gnu":         {},
-    "x86_64-apple-darwin":               {},
-    "x86_64-pc-windows-gnu":             {},
-    "x86_64-unknown-linux-gnu":          {},
-    "x86_64-unknown-linux-musl-dynamic": {},
-    "x86_64-unknown-linux-musl-static":  {},
+    "aarch64-apple-darwin":                   {},
+    "aarch64-unknown-linux-gnu":              {},
+    "aarch64-unknown-linux-musl-dynamic":     {},
+    "aarch64-unknown-linux-musl-static":      {},
+    "arm-unknown-linux-gnueabihf":            {},
+    "arm-unknown-linux-musl-dynamiceabihf":   {},
+    "arm-unknown-linux-musl-staticeabihf":    {},
+    "armv7-unknown-linux-gnueabihf":          {},
+    "armv7-unknown-linux-musl-dynamiceabihf": {},
+    "armv7-unknown-linux-musl-staticeabihf":  {},
+    "x86_64-apple-darwin":                    {},
+    "x86_64-pc-windows-gnu":                  {},
+    "x86_64-unknown-linux-gnu":               {},
+    "x86_64-unknown-linux-musl-dynamic":      {},
+    "x86_64-unknown-linux-musl-static":       {},
   }.freeze
 
   def target_triple
