@@ -5,21 +5,21 @@ class Vandelay < Formula
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/stalwartlabs/vandelay/releases/download/v1.0.6/vandelay-aarch64-apple-darwin.tar.gz"
-      sha256 "2978874edb4699e14eb92e3185fc97c80bafcffe33a61c09dfc1763c1f0de430"
+      sha256 "826d5d663cb111600f134080345fced361b90a6f29984235839dee434b559b4d"
     end
     if Hardware::CPU.intel?
       url "https://github.com/stalwartlabs/vandelay/releases/download/v1.0.6/vandelay-x86_64-apple-darwin.tar.gz"
-      sha256 "c30b9bda5b184de9d0734c996ef3527d3f1f298252ad180b9626bf7550ae9ad0"
+      sha256 "b8232bdd421808ec21bbebb7f07bd206ff55fe4402fa713ece42b5f8d41e2c9b"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
       url "https://github.com/stalwartlabs/vandelay/releases/download/v1.0.6/vandelay-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "c04eb6f00f53dbabdee1fbf0c7a4b2939f47e024f2a03a648bb0230a6a3888bd"
+      sha256 "f68e2344f7e45a778b5f3c389bc530bd9f7e67b7cd3ba1d7bdc5870affdcc1f4"
     end
     if Hardware::CPU.intel?
       url "https://github.com/stalwartlabs/vandelay/releases/download/v1.0.6/vandelay-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "c6aad4c53d98ad76e381a43b55ae0f043021147d728dcf9e391347c088822ea3"
+      sha256 "7f32e39ceccbec7a97d50210e15cd6f331bdce60f3dc14bb24c0e723fa228680"
     end
   end
   license any_of: ["Apache-2.0", "MIT"]
