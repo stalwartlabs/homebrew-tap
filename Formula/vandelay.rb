@@ -1,25 +1,25 @@
 class Vandelay < Formula
   desc "JMAP account migration utility"
   homepage "https://github.com/stalwartlabs/vandelay"
-  version "1.0.6"
+  version "1.0.7"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/stalwartlabs/vandelay/releases/download/v1.0.6/vandelay-aarch64-apple-darwin.tar.gz"
-      sha256 "b74cd1a69df8184bdeca41b0ce45a66c09c213a073ebefcf8cae7846266141e4"
+      url "https://github.com/stalwartlabs/vandelay/releases/download/v1.0.7/vandelay-aarch64-apple-darwin.tar.gz"
+      sha256 "7b3de8c32e20b5174141b7793e4cef142c5a2ed6a2f28e001d21e4a55990be97"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/stalwartlabs/vandelay/releases/download/v1.0.6/vandelay-x86_64-apple-darwin.tar.gz"
-      sha256 "ac35da855efe053b919231e91a8df24b82317dbc4cecb5b16950f0e9cca7f902"
+      url "https://github.com/stalwartlabs/vandelay/releases/download/v1.0.7/vandelay-x86_64-apple-darwin.tar.gz"
+      sha256 "4a0b2729f0ad19bcf176926c8077738eaca374f3a2f8dbea6ec3991481f932c6"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/stalwartlabs/vandelay/releases/download/v1.0.6/vandelay-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "7b2f640d9b0ad29874812e7d726e0aef9a1941c74d11dd96c2c74488ffc53982"
+      url "https://github.com/stalwartlabs/vandelay/releases/download/v1.0.7/vandelay-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "4afa42b4387de3e7420e1e86ca198c5bad943b05479b144d53a16899a17363a0"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/stalwartlabs/vandelay/releases/download/v1.0.6/vandelay-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "ec5be47bd8755c55e10fbe88b903da2b89c22c3cdd3b0d66ba083e1eac38ccfa"
+      url "https://github.com/stalwartlabs/vandelay/releases/download/v1.0.7/vandelay-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "ea66a2616a807d8aea6f50c16e0d3193fe0fe24380ce49fa784b0d0029f3d6fe"
     end
   end
   license any_of: ["Apache-2.0", "MIT"]
