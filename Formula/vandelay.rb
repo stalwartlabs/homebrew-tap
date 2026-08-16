@@ -1,25 +1,25 @@
 class Vandelay < Formula
   desc "JMAP account migration utility"
   homepage "https://github.com/stalwartlabs/vandelay"
-  version "1.0.7"
+  version "1.0.8"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/stalwartlabs/vandelay/releases/download/v1.0.7/vandelay-aarch64-apple-darwin.tar.gz"
-      sha256 "7b3de8c32e20b5174141b7793e4cef142c5a2ed6a2f28e001d21e4a55990be97"
+      url "https://github.com/stalwartlabs/vandelay/releases/download/v1.0.8/vandelay-aarch64-apple-darwin.tar.gz"
+      sha256 "239da7b19d3c1b92c7e8d27556f45870c1c29826015dfcc009e5f1e80c8240a0"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/stalwartlabs/vandelay/releases/download/v1.0.7/vandelay-x86_64-apple-darwin.tar.gz"
-      sha256 "4a0b2729f0ad19bcf176926c8077738eaca374f3a2f8dbea6ec3991481f932c6"
+      url "https://github.com/stalwartlabs/vandelay/releases/download/v1.0.8/vandelay-x86_64-apple-darwin.tar.gz"
+      sha256 "97951a433b540705ab39c08501def685210a90b767ded9828e0fa929c0ebafd0"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/stalwartlabs/vandelay/releases/download/v1.0.7/vandelay-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "4afa42b4387de3e7420e1e86ca198c5bad943b05479b144d53a16899a17363a0"
+      url "https://github.com/stalwartlabs/vandelay/releases/download/v1.0.8/vandelay-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "326c09b5db7bbdc546bb0350ed487ae9160f387d408ba9fadb9d24e9f99cff8a"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/stalwartlabs/vandelay/releases/download/v1.0.7/vandelay-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "ea66a2616a807d8aea6f50c16e0d3193fe0fe24380ce49fa784b0d0029f3d6fe"
+      url "https://github.com/stalwartlabs/vandelay/releases/download/v1.0.8/vandelay-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "adc6c985515f27c2288b60e5638c67ab9993e66154d6f0de6d5f152f974dbbc0"
     end
   end
   license any_of: ["Apache-2.0", "MIT"]
@@ -58,10 +58,18 @@ class Vandelay < Formula
   end
 
   def install
-    bin.install "vandelay" if OS.mac? && Hardware::CPU.arm?
-    bin.install "vandelay" if OS.mac? && Hardware::CPU.intel?
-    bin.install "vandelay" if OS.linux? && Hardware::CPU.arm?
-    bin.install "vandelay" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "vandelay"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "vandelay"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "vandelay"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "vandelay"
+    end
 
     install_binary_aliases!
 
