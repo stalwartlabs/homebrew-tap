@@ -1,25 +1,25 @@
 class StalwartCli < Formula
   desc "Stalwart CLI"
   homepage "https://github.com/stalwartlabs/cli"
-  version "1.0.12"
+  version "1.0.13"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/stalwartlabs/cli/releases/download/v1.0.12/stalwart-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "4c3e2fcbcde593814739426dad369a84eaa82140daf751245a25c2761a5224cf"
+      url "https://github.com/stalwartlabs/cli/releases/download/v1.0.13/stalwart-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "bde521b9fa035e22cdc7c3f8837a18ce94b975c643a505422bd3738dccda0afc"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/stalwartlabs/cli/releases/download/v1.0.12/stalwart-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "55dd4ebec8f258039a6b3e2bce82f3f9856d28ebf731966fd57548049730635c"
+      url "https://github.com/stalwartlabs/cli/releases/download/v1.0.13/stalwart-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "7b3598f71b9b18c4e1d596769c41bb61945114620434670fb0ed2bb5f3f009a7"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/stalwartlabs/cli/releases/download/v1.0.12/stalwart-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "21133474b880c96836999464197728896f17e723a999690e7bf5d042323240d4"
+      url "https://github.com/stalwartlabs/cli/releases/download/v1.0.13/stalwart-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "65f4b6e528d84388953fc98d946339dd8246fb03bf4caaa64e1d9b378f52d892"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/stalwartlabs/cli/releases/download/v1.0.12/stalwart-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "e2bb054509aaac311f13ff4f9e09c38c607195de2e9735cf84cfc6ee4776a5a2"
+      url "https://github.com/stalwartlabs/cli/releases/download/v1.0.13/stalwart-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "1b8509b767edd1a17693e092b518c41610ec4b724f4e62c461bd28cd40c669f7"
     end
   end
   license any_of: ["AGPL-3.0-only", "LicenseRef-SEL"]
@@ -58,10 +58,18 @@ class StalwartCli < Formula
   end
 
   def install
-    bin.install "stalwart-cli" if OS.mac? && Hardware::CPU.arm?
-    bin.install "stalwart-cli" if OS.mac? && Hardware::CPU.intel?
-    bin.install "stalwart-cli" if OS.linux? && Hardware::CPU.arm?
-    bin.install "stalwart-cli" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "stalwart-cli"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "stalwart-cli"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "stalwart-cli"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "stalwart-cli"
+    end
 
     install_binary_aliases!
 
